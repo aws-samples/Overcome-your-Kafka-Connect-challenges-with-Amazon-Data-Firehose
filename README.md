@@ -1,11 +1,12 @@
-## My Project
+## Overcome your Kafka Connect challenges with Amazon Data Firehose
 
-TODO: Fill this README out!
+This repository contains a python script, get_latest_offsets.py, that will connect to an Amazon MSK cluster using the iam-sasl-signer library to enable IAM authentication for non-Java Kafka clients, in order to scan and output the latest offset positions in the provided consumer-group, per-partition, on the Kafka topic you provide. 
 
-Be sure to:
-
-* Change the title in this README
-* Edit your repository description on GitHub
+Running the script requires the following parameters be provided in the command line: 
+- broker-list : a comma-separated list of representing the bootstrap server strings for your Kafka brokers
+- topic-name : name of the topic on the Kafka cluster 
+- consumer-group-id : ID of the consumer group you would like to query the latest-offset positions from
+- aws-region : AWS region that the MSK cluster resides in
 
 ## Security
 
